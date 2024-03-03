@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 CSS RESET * {
   margin: 0px;
   padding: 0px;
@@ -5,7 +9,7 @@ CSS RESET * {
 
 /* CSS VARIABLES  */
 :root {
-  --smallheadingfont: 'Noto Sans KR', sans-serif;
+  --smallheadingfont: "Anta", sans-serif;
   --smallheadingcolor: #b5babc;
   --verysmalltextcolor: #ffffffba;
   --hoverframe: rgba(123, 123, 123, 0.274);
@@ -14,243 +18,48 @@ CSS RESET * {
   --bodycolor: #000a0f;
 }
 
-/* BODY BODY BODY BODY  */
-body {
-  height: 100vh;
-  margin: 0px;
-  padding: 0px;
-}
-
 /* ROOT ROOT ROOT ROOT */
 #root {
   display: flex;
   flex-direction: row;
   background-color: var(--bodycolor);
-  height: 100vh;
 }
 
-/* LEFTCONTAINER LEFTCONTAINER LEFTCONTAINER  */
-.leftcontainer {
-  height: 100%;
-  /* background-color: var(--darkblue1); */
-  width: 15%;
-  color: gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* TECHSTACKCONTAINER TECHSTACKCONTAINER TECHSTACKCONTAINER  */
-.techstackcontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 95%;
-  width: 98%;
+.techstackContainer {
   background-color: var(--bigcontainerBG);
-  border-radius: 10px;
-  /* border: 2px solid gray; */
 }
 
-/* TITTLEBOX TITTLEBOX TITTLEBOX */
-.techstackcontainer .tittlebox {
-  width: 100%;
-  height: 13%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#techId {
+  font-family: "Ojuju", sans-serif;
 }
 
-.techstackcontainer .tittlebox h1 {
-  font-family: 'Noto Sans KR', sans-serif;
-  ;
-  font-size: 3.7vh;
-  color: var(--smallheadingcolor);
-}
-
-/* CONTENTBOX CONTENTBOX CONTENTBOX */
-.techstackcontainer .contentbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 40%;
-}
-
-/* CONTENTINNER CONTENTINNER CONTENTINNER */
-.techstackcontainer .contentbox .contentinner {
-  margin: 7px 0px;
-  border-radius: 7px;
-  width: 81%;
+.techBox {
   background-color: var(--bigcontainerinnerBG);
-  height: 17%;
-  display: flex;
-  align-items: center;
-  border: 0.7px solid var(--bigcontainerinnerBG);
-  cursor: pointer;
 }
 
-.contentbox .contentinner:hover {
-  margin: 7px 0px;
-  border-radius: 7px;
-  width: 81%;
+.flashContent {
   background-color: var(--bigcontainerinnerBG);
-  height: 17%;
-  display: flex;
-  align-items: center;
-  border: 0.7px solid var(--hoverframe);
 }
 
-.contentinner .textbox {
-  width: 70%;
+.langchain .textBox h1 {
+  margin-left: 1px;
+  font-family: "Anta", sans-serif;
 }
 
-.contentinner .textbox h1 {
-  font-size: 2vh;
-  font-weight: 100;
-  font-family: var(--smallheadingfont);
-  margin-left: 5px;
-  color: #ffffff9e;
+.huggingfacebox .textBox h1 {
+  margin-left: 10px;
 }
 
-/* LANGCHAIN LANGCHAIN LANGCHAIN  */
-.langchainbox .imagebox {
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  border-radius: 2px;
-  width: 21%;
-  position: relative;
+.flaskBox .textBox h1 {
+  margin-left: 10px;
 }
 
-.langchainbox .imagebox img {
-  height: 56%;
-  padding: 2px;
-  border-radius: 7px;
-  width: 59%
+.gradioBox .textBox h1 {
+  margin-left: 6px;
 }
 
-/* HUGGINGFACE HUGGINGFACE HUGGINGFACE */
-.huggingfacebox .imagebox {
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  border-radius: 2px;
-  width: 21%;
-  position: relative;
-}
-
-.huggingfacebox .imagebox img {
-  height: 55%;
-  padding: 2px;
-  border-radius: 7px;
-}
-
-/* FLASK FLASK FLASK  */
-.flaskbox .imagebox {
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  border-radius: 2px;
-  width: 21%;
-  position: relative;
-}
-
-.flaskbox .imagebox img {
-  height: 40%;
-  padding: 2px;
-  border-radius: 7px;
-  padding: 4px;
-}
-
-/* GRADIO GRADIO GRADIO  */
-.gradiobox .imagebox {
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  border-radius: 2px;
-  width: 21%;
-  position: relative;
-}
-
-.gradiobox .imagebox img {
-  height: 42%;
-  padding: 2px;
-  border-radius: 7px;
-  padding: 5px;
-}
-
-/* FLASHBOX FLASHBOX FLASHBOX */
-.flashbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 47%;
-}
-
-.flashcontent {
-  width: 82%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--bigcontainerinnerBG);
-  border-radius: 20px;
-}
-
-.flashbox .imagebox {
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.flashbox .imagebox img {
-  width: 75%;
-  height: 79%;
-}
-
-.flashbox .textbox {
-  width: 100%;
-  height: 20%;
-  color: var(--verysmalltextcolor);
-  font-size: 2.5vh;
-  font-family: var(--smallheadingfont);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flashbox .btn {
-  width: 65%;
-  height: 10%;
-  color: white;
-  background-color: #ff7300;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.7vh;
-  font-weight: 900;
-  font-family: var(--smallheadingfont);
-  cursor: pointer;
-}
-
-.flashbox .btn:hover {
-  background-color: #fb7910;
-}
-
-/* MIDDLECONTAINER MIDDLECONTAINER MIDDLECONTAINER  */
-.middlecontainer {
-  width: 57%;
-  display: flex;
-  flex-direction: column;
+* {
+  font-family: "Anta", sans-serif;
 }
 
 /* MAINCONTAINER MAINCONTAINER MAINCONTAINER */
@@ -269,48 +78,22 @@ body {
   flex-direction: row;
 }
 
-/* MAINLEFT MAINLEFT MAINLEFT */
-.mainleft {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.mainleft .tittle1 {
-  height: 10%;
-  margin-top: 2rem;
-}
-
-.mainleft .tittle1 h1 {
-  font-size: 5vh;
+.mainLeft .tittleOne h1 {
   background: -webkit-linear-gradient(left, #ca5fff, #00ffd4);
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0px 15px;
 }
 
-.mainleft .tittle2 {
-  height: 20%;
-}
-
-.mainleft .tittle2 h1 {
-  font-size: 9vh;
+.mainLeft .tittleTwo h1 {
   background: -webkit-linear-gradient(left, #d157fa, #e39001c3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0px 15px;
 }
 
-.mainleft .description {
-  height: 20%;
-  font-size: 2.3vh;
+.mainLeft .descriptionBelow {
   color: #ffffff4a;
-  padding-left: 15px;
   font-family: var(--smallheadingfont);
-  display: flex;
-  align-items: center;
+  font-family: "Ojuju", sans-serif;
 }
 
 /* MAINRIGHT MAINRIGHT MAINRIGHT */
@@ -321,18 +104,20 @@ body {
   align-items: center;
 }
 
-.mainright img {
-  height: 47%;
-  filter: drop-shadow(3px 1px 40px #ffffff4c);
+.mainRight img {
+  filter: drop-shadow(-28px 1px 302px #ffffff4c) drop-shadow(-64px 1px 125px #aff0ff69) drop-shadow(-28px 1px 50px #048fd03e);
+  opacity: 80%;
+  position: relative;
+  height: 79%;
 }
 
 .mainright img:hover {
-  filter: drop-shadow(3px 1px 40px #ffffff4f);
+  filter: drop-shadow(-28px 1px 30px #ffffff4c) drop-shadow(-64px 1px 125px #aff0ff69);
 }
 
 /* FEATURECONTAINER FEATURECONTAINER FEATURECONTAINER  */
 .featurecontainer {
-  height: 45%;
+  height: 39%;
   display: flex;
   align-items: center;
   width: 100%;
@@ -406,7 +191,7 @@ body {
 .featureboxleft span {
   color: var(--verysmalltextcolor);
   font-size: 2vh;
-  font-family: var(--smallheadingfont);
+  font-family: "Ojuju", sans-serif;
 }
 
 /* FEATUREBOXRIGHT FEATUREBOXRIGHT  */
@@ -456,7 +241,7 @@ body {
 
 /* CHATBOTCONTAINER CHATBOTCONTAINER CHATBOTCONTAINER  */
 .rightcontainer {
-  width: 36%;
+  /* width: 55%; */
   height: 100vh;
   overflow: hidden;
 }

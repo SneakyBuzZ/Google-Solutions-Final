@@ -1,9 +1,12 @@
-import Home from "./templates/Home"
-
+import { TechStack, MainComponent, ChatBot } from "./components"
 function App() {
   return (
     <>
-      <Home />
+      <div className="mainDiV flex flex-row w-full">
+        <TechStack />
+        <MainComponent />
+        <ChatBot />
+      </div>
     </>
   )
 }
